@@ -269,10 +269,10 @@ function restartGame() {
     tiles.forEach(tile => {
         tile.parentNode.removeChild(tile);
     })
+    score = 0;
+    document.getElementById("score").innerText = score;
     
     setGame();
-    let score = 0;
-    document.getElementById("score").innerText = score;
 }
 // game over //
 
