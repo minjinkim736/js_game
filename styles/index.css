@@ -1,0 +1,93 @@
+/* -----fonts----- */
+
+
+h1 {
+    font-family: "Bagel Fat One", system-ui;
+    font-size: 6rem;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* h1::first-letter {
+    color: #5AA9E6;
+    color: #7FC8F8;
+    color: #FFE45E;
+    color: #FF6392;
+    color: #F9F9F9;
+
+} */
+
+#h1_2{
+    color: #5AA9E6;
+}
+
+#h1_0{
+    color: #F9F9F9;
+}
+
+#h1_4{
+    color: #FFE45E;
+}
+
+#h1_8{
+    color: #FF6392;
+}
+
+h2, p, a {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+h2 {
+    font-weight: 500;
+}
+
+ 
+/* -----components----- */
+
+body {
+    max-width: 60%;
+    margin: 5rem auto;
+    justify-items: center;
+}
+
+section{
+    border: 10px solid rgb(210, 210, 210);
+    margin: 5rem auto;
+    border-radius: 30px;
+    padding: 2rem;
+}
+
+.article-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.game_board {
+    border: 1px solid black;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer {
+    margin-top: 10rem;
+}
+
+
+/* elements */
+
+h1, h2{
+    text-align: center;
+}
+
+p {
+    line-height: 1.6rem;
+}

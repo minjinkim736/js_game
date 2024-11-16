@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="styles/gameboard.css">
+
+    <!-- h1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <h1>
+            <span id="h1_2">2</span>
+            <span id="h1_0">0</span>
+            <span id="h1_4">4</span>
+            <span id="h1_8">8</span>
+        </h1>       
+    </section>
+    
+    <section class="game_control">
+        <h2>SCORE: <span id="score">0</span></h2> 
+        <div class="control_buttons"> 
+            <!--home button -->
+            <button id = "homeBtn" class="control_btn">
+                <img class="btn_img" src="images/home.png" alt="home">
+            </button>
+            <!--restart button -->
+            <button id="restartBtn" class = "control_btn">
+                <img class="btn_img" src="images/restart.png" alt="restart">
+            </button>
+            <!--help button -->
+            <button id="helpBtn" class = "control_btn">
+                <img class="btn_img" src="images/help.png" alt="help">
+            </button>
+        </div>
+    </section>
+
+    <section class="game_board">    
+        <div id="board"></div>
+    </section>
+
+    <!-- Win Game Modal -->
+    <section id="gameWinModal" class="modal">
+        <div class="modal-content">
+            <h2>You won!</h2>
+            <p>Congratulations🎉🎉🎉! Play again?</p>
+            <button id="confirmRestart" class="restart-btn">Restart</button>
+            <button id = "goHome" class="home-btn">Go to Home</button>
+        </div>
+    </section>
+    
+    <!-- Game Over Modal -->
+    <section id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <h2>Game Over</h2>
+            <p>You’ve reached the end! Try again?</p>
+            <button id="confirmRestart" class="restart-btn">Restart</button>
+            <button id = "goHome" class="home-btn">Go to Home</button>
+        </div>
+    </section>
+
+    <!-- Restart Modal --> 
+    <section id="restartModal" class="modal">
+        <div class="modal-content">
+            <h2>Restart Game</h2>
+            <p>Would you like to start a new game?</p>
+            <button id="confirmRestart" class="restart-btn">Restart</button>
+            <button id="cancel" class="close-btn">Cancel</button>
+        </div>
+    </section>
+
+    <!-- BacktoHome Modal -->
+    <section id="homeModal" class="modal">
+            <div class="modal-content">
+            <h2>Return to Home</h2>
+            <p>Are you sure you want to go back to the home screen?</p>
+            <button id = "goHome"class="home-btn">Go to Home</button>
+            <button id="cancel" class="close-btn">Cancel</button>
+        </div>
+    </section>
+
+
+    <!-- help Section -->
+
+    <section id="help" class="help">
+        <h2>Need Help?</h2>
+            <h3>How to Play</h3>
+            <p>Combine tiles with the same number to reach your target tile and win the game. Choose your difficulty: reach 2048, 4096, or 8192 to win! Use the arrow keys ⬅️⬆️⬇️➡️ to slide the tiles in different directions, merging them to create higher numbers.</p>
+            <h3>Tips and Tricks</h3>
+            <ol>
+                <li>Choose a Corner
+                    Always try to keep your highest value tile in one corner and build around it.</li>
+                <li>Stick to Two Directions
+                    Consistently use only two directions (e.g., up and left) to keep your tiles organized and avoid scattering.</li>
+                <li>Plan Ahead
+                    Think a few moves ahead to set yourself up for successful merges and prevent creating gaps.</li>
+            </ol>
+    </section>
+    <script src="scripts/gameboard_2048.js"></script>
+</body>
+</html>
+
+
+  

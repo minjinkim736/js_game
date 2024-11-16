@@ -1,0 +1,228 @@
+/* colors */
+/* 
+#5AA9E6
+#7FC8F8
+#FFE45E
+#FF6392
+#F9F9F9
+ */
+
+
+/* -----fonts----- */
+
+ h1 {
+    font-family: "Bagel Fat One", system-ui;
+    font-size: 6rem;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#h1_2{
+    color: #5AA9E6;
+}
+
+#h1_0{
+    color: #F9F9F9;
+}
+
+#h1_4{
+    color: #FFE45E;
+}
+
+#h1_8{
+    color: #FF6392;
+}
+
+/* -----elements----- */
+
+h1{
+    margin: 2rem auto;
+}
+
+
+/* -----components----- */
+
+body {
+    text-align: center;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+
+
+/* section game_control */
+
+section.game_control {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25.6rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control_btn {
+    border: #ffffff;
+    background-color: #ffffff;
+}
+
+.btn_img {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: .5rem;
+}
+
+
+#board {
+    width: 400px;
+    height: 400px;
+    background-color: #cdc1b5;
+    border: 6px solid #bbada0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    width: 90px;
+    height: 90px;
+    border: 5px solid #bbada0;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* section help */
+
+section.help{
+    display: none;
+    background-color: #cdc1b550;
+    border-radius: 20px;
+    padding: 1rem;
+    position: fixed;
+    right: 11rem;
+    top: 12rem;
+    width: 20%;
+    text-align: left;
+}
+
+
+section.help h2 {
+    font-size: 1rem;
+}
+
+section.help h3, p, ol, li {
+    font-size: .8rem;
+}
+
+section.help ol {
+    padding-inline-start: 1.25rem;
+}
+
+
+
+/* adding colors for tiles with different colors */
+
+.x2 {
+    background-color: #eee4da;
+    color: #727371;
+}
+
+.x4 {
+    background-color: #ece0ca;
+    color: #727371;
+}
+
+.x8 {
+    background-color: #f4b17a;
+    color: white;
+}
+
+.x16{
+    background-color: #f59575;
+    color: white;
+}
+
+.x32{
+    background-color: #f57c5f;
+    color: white;
+}
+
+.x64{
+    background-color: #f65d3b;
+    color: white;
+}
+
+.x128{
+    background-color: #edce71;
+    color: white;
+}
+
+.x256{
+    background-color: #edcc63;
+    color: white;
+}
+
+.x512{
+    background-color: #edc651;
+    color: white;
+}
+
+.x1024{
+    background-color: #eec744;
+    color: white;
+}
+
+.x2048{
+    background-color: #ecc230;
+    color: white;
+}
+
+.x4096 {
+    background-color: #fe3d3d;
+    color: white;
+}
+
+.x8192 {
+    background-color: #ff2020;
+    color: white;
+}
+
+
+
+/* modals */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    margin: 15% auto;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+
+
+
