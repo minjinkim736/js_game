@@ -73,7 +73,83 @@ section.game_control {
 }
 
 
-#board {
+/* added---------------------------------------------------------- */
+/* styles.css */
+
+/* 보드 공통 스타일 */
+.board {
+    display: grid;
+    gap: 5px;
+    background-color: #bbada0;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+  }
+  
+  /* 2048 보드 스타일 */
+  #board-2048 {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    width: 400px;
+    height: 400px;
+  }
+  
+  /* 4096 보드 스타일 */
+  #board-4096 {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    width: 500px;
+    height: 500px;
+  }
+  
+  /* 8192 보드 스타일 */
+  #board-8192 {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    width: 600px;
+    height: 600px;
+  }
+  
+  /* 타일 공통 스타일 */
+  .tile {
+    background-color: #cdc1b5;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* 타일 크기 조정 */
+  #board-2048 .tile {
+    width: 90px;
+    height: 90px;
+  }
+  
+  #board-4096 .tile {
+    width: 90px;
+    height: 90px;
+  }
+  
+  #board-8192 .tile {
+    width: 90px;
+    height: 90px;
+  }
+  
+/* added---------------------------------------------------------- */
+
+
+
+
+
+
+/* ---------------------------------------------------------- */
+
+/* board
+
+#board-2048 {
     width: 400px;
     height: 400px;
     background-color: #cdc1b5;
@@ -83,6 +159,9 @@ section.game_control {
     flex-wrap: wrap;
 }
 
+
+/* tile */
+/* 
 .tile {
     width: 90px;
     height: 90px;
@@ -92,8 +171,9 @@ section.game_control {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
+/* ---------------------------------------------------------- */
 
 /* section help */
 
