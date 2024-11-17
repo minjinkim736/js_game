@@ -1,8 +1,8 @@
 let board;
 let score = 0;
-const rows = 4;
-const columns = 4;
-const endNumber = 2048;
+let rows = 4;
+let columns = 4;
+let endNumber = 2048;
 
 const urlParams = new URLSearchParams(window.location.search);
 const mode = urlParams.get('mode');
@@ -11,10 +11,15 @@ if (mode === "4096"){
     rows = 5;
     columns = 5;
     endNumber = 4096;
+    document.getElementById('board').classList.add('board-4096');
 } else if (mode === "8192"){
     rows = 6;
     columns = 6;
     endNumber = 8192;
+    document.getElementById('board').classList.add('board-8192');
+} else {
+    document.getElementById('board').classList.add('board-2048');
+
 }
 
 window.onload = function() {
@@ -23,12 +28,7 @@ window.onload = function() {
 
 // -----set game----- //
 function setGame() {
-    board = [
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0]
-    ]
+    board = Array.from({length: rows }, () => Array(columns).fill(0));
 
     // create tiles
     for (let r = 0; r < rows; r++) {
@@ -188,30 +188,36 @@ function slideRight(){
 }
 
 // trasforming columns in to rows and slideLeft
-function slideUp(){
-    for(let c = 0; c < columns; c++){
-        let row = [board[0][c], board[1][c], board[2][c], board[3][c]];
+function slideUp() {
+    for (let c = 0; c < columns; c++) {
+        let row = [];
+        for (let r = 0; r < rows; r++) {
+            row.push(board[r][c]);
+        }
         row = slide(row);
-        for(let r = 0; r < rows; r++) {
+        for (let r = 0; r < rows; r++) {
             board[r][c] = row[r];
             let tile = document.getElementById(r.toString() + "-" + c.toString());
             let num = board[r][c];
-            updateTile(tile,num); 
+            updateTile(tile, num);
         }
     }
 }
 
-function slideDown(){
-    for(let c = 0; c < columns; c++){
-        let row = [board[0][c], board[1][c], board[2][c], board[3][c]];
+function slideDown() {
+    for (let c = 0; c < columns; c++) {
+        let row = [];
+        for (let r = 0; r < rows; r++) {
+            row.push(board[r][c]);
+        }
         row.reverse(); //reverse row
         row = slide(row);
         row.reverse(); //reverse row
-        for(let r = 0; r < rows; r++) {
+        for (let r = 0; r < rows; r++) {
             board[r][c] = row[r];
             let tile = document.getElementById(r.toString() + "-" + c.toString());
             let num = board[r][c];
-            updateTile(tile,num); 
+            updateTile(tile, num);
         }
     }
 }

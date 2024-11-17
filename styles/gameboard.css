@@ -87,7 +87,7 @@ section.game_control {
   }
   
   /* 2048 보드 스타일 */
-  #board-2048 {
+  .board-2048 {
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(4, 1fr);
     width: 400px;
@@ -95,7 +95,7 @@ section.game_control {
   }
   
   /* 4096 보드 스타일 */
-  #board-4096 {
+  .board-4096 {
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(5, 1fr);
     width: 500px;
@@ -103,7 +103,7 @@ section.game_control {
   }
   
   /* 8192 보드 스타일 */
-  #board-8192 {
+  .board-8192 {
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
     width: 600px;
