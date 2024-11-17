@@ -42,8 +42,16 @@ function setGame() {
     }
 
     // create first two tiles
-    setTwo();
-    setTwo();
+
+    if(mode ==="2048"){
+        setTwo();
+        setTwo();
+    } else {
+        setTwo();
+        setFour();
+    }
+
+
 }
 
 function updateTile(tile, num){
@@ -74,7 +82,9 @@ function hasEmptyTile(){
     return false;
 }
 
-// genarate tiles in radom place
+
+// generating random tiles//
+
 function setTwo(){
     if(!hasEmptyTile()){
         endGame();
@@ -97,6 +107,28 @@ function setTwo(){
     }
 }
 
+function setFour(){
+    if(!hasEmptyTile()){
+        endGame();
+        return;
+    } //if there's no empty tile, don't create new ones and end game
+
+    let found = false;
+    while(!found){
+        //random r,c
+        let r = Math.floor(Math.random()*rows);
+        let c = Math.floor(Math.random()*columns);
+
+        if(board[r][c] == 0){
+            board[r][c] = 4;
+            let tile = document.getElementById(r.toString() + "-" + c.toString());
+            tile.innerText = "4";
+            tile.classList.add("x4");
+            found = true;  //break the loop
+        }
+    }
+}
+
 
 // win game //
 function checkWin(num){
@@ -106,22 +138,30 @@ function checkWin(num){
 
 
 // -----eventlistener----- //
-document.addEventListener("keyup", (e) =>{
-    if(e.code == "ArrowLeft"){
+document.addEventListener("keyup", (e) => {
+    if (e.code == "ArrowLeft") {
         slideLeft();
-        setTwo();
-    } else if(e.code == "ArrowRight"){
+    } else if (e.code == "ArrowRight") {
         slideRight();
-    } else if(e.code == "ArrowUp"){
+    } else if (e.code == "ArrowUp") {
         slideUp();
-        setTwo();
-
-    } else if(e.code == "ArrowDown"){
+    } else if (e.code == "ArrowDown") {
         slideDown();
-        setTwo();
     }
+
+    if (mode === "2048") {
+        setTwo();
+    } else if (mode === "4096") {
+        setTwo();
+        setTwo();
+    } else if (mode === "8192") {
+        setTwo();
+        setFour();
+    }
+
     document.getElementById("score").innerText = score;
-})
+});
+
 
 //get rid of zeros
 function filterZero(row){
@@ -155,6 +195,7 @@ function slide(row){
 
 // -----arrowkey functions----- //
 function slideLeft(){
+    let moved = false;
     for(let r = 0; r < rows; r++) {
         let row = board[r]; //select rows
         row = slide(row);
