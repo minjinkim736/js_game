@@ -4,6 +4,19 @@ const rows = 4;
 const columns = 4;
 const endNumber = 2048;
 
+const urlParams = new URLSearchParams(window.location.search);
+const mode = urlParams.get('mode');
+
+if (mode === "4096"){
+    rows = 5;
+    columns = 5;
+    endNumber = 4096;
+} else if (mode === "8192"){
+    rows = 6;
+    columns = 6;
+    endNumber = 8192;
+}
+
 window.onload = function() {
     setGame();
 }
