@@ -10,26 +10,26 @@
     <link rel="stylesheet" href="styles/index.css">
     <title>2048</title>
 
-    <!-- add fonts here -->
+    <!-- fonts -->
      <!-- h1 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
 
+    <!-- body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <main class="site-wrapper">
-        <h1>
-            <span id="h1_2">2</span>
-            <span id="h1_0">0</span>
-            <span id="h1_4">4</span>
-            <span id="h1_8">8</span>
-        </h1>
-
+    <h1>
+        <span id="h1_2">2</span>
+        <span id="h1_0">0</span>
+        <span id="h1_4">4</span>
+        <span id="h1_8">8</span>
+    </h1>
+    <main class="contents-wrapper">
         <section class="description">
             <h2>Welcome to the 2048 Game!</h2>        
             <p>Combine tiles with the same number to reach your target tile and win the game. Choose your difficulty: reach 2048, 4096, or 8192 to win! Use the arrow keys ⬅️⬆️⬇️➡️ to slide the tiles in different directions, merging them to create higher numbers.</p>
@@ -38,9 +38,9 @@
         <section class="game_mode">
             <h2>Choose Your Game Mode</h2>
             <div class="article-wrapper">
-                <article class="game_board"><a href="gameboard.html">2048 4x4</a></article>
-                <article class="game_board">4096 5x5</article>
-                <article class="game_board">8192 6x6</article>
+                <article class="game_board"><a href="gameboard.html?mode=2048"><img src="images/gameboard_2048.png" alt="gameboard image_2048"></a></article>
+                <article class="game_board"><a href="gameboard.html?mode=4096"><img src="images/gameboard_4096.png" alt="gameboard image_4096"></a></article>
+                <article class="game_board"><a href="gameboard.html?mode=8192"><img src="images/gameboard_8192.png" alt="gameboard image_8192"></a></article>
             </div>
         </section>
     </main>

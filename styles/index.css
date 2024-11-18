@@ -9,15 +9,6 @@ h1 {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-/* h1::first-letter {
-    color: #5AA9E6;
-    color: #7FC8F8;
-    color: #FFE45E;
-    color: #FF6392;
-    color: #F9F9F9;
-
-} */
-
 #h1_2{
     color: #5AA9E6;
 }
@@ -44,20 +35,34 @@ h2 {
     font-weight: 500;
 }
 
+a {
+    text-decoration: none; 
+}
  
 /* -----components----- */
 
 body {
-    max-width: 60%;
-    margin: 5rem auto;
+    max-width: 80%;
+    margin: 3rem auto;
     justify-items: center;
+    background-color: #dee8f7;
 }
 
-section{
-    border: 10px solid rgb(210, 210, 210);
-    margin: 5rem auto;
-    border-radius: 30px;
+.contents-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+section {
+    width: 30rem;
+    background-color: #ffffff;
+    margin: 1rem auto;
     padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(192, 192, 192);
+
 }
 
 .article-wrapper{
@@ -68,7 +73,6 @@ section{
 }
 
 .game_board {
-    border: 1px solid black;
     width: 6rem;
     height: 6rem;
     display: flex;
@@ -76,6 +80,13 @@ section{
     align-items: center;
 }
 
+.game_board img{
+    border-radius: 10px;
+}
+
+.game_board a:hover{
+    transform: scale(1.2);
+}
 
 footer {
     margin-top: 10rem;
