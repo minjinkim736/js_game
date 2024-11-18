@@ -138,17 +138,38 @@ function checkWin(num){
 
 
 // -----eventlistener----- //
+
+
+window.addEventListener("keydown", function(e) {
+if(["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+     e.preventDefault(); 
+    } 
+});
+
 document.addEventListener("keyup", (e) => {
     if (e.code == "ArrowLeft") {
         slideLeft();
+        ranNum();
     } else if (e.code == "ArrowRight") {
         slideRight();
+        ranNum();
     } else if (e.code == "ArrowUp") {
         slideUp();
+        ranNum();
     } else if (e.code == "ArrowDown") {
         slideDown();
+        ranNum();
     }
 
+
+
+    document.getElementById("score").innerText = score;
+});
+
+
+// generating random numbers //
+
+function ranNum(){
     if (mode === "2048") {
         setTwo();
     } else if (mode === "4096") {
@@ -158,9 +179,7 @@ document.addEventListener("keyup", (e) => {
         setTwo();
         setFour();
     }
-
-    document.getElementById("score").innerText = score;
-});
+}
 
 
 //get rid of zeros
